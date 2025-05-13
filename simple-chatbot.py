@@ -12,12 +12,6 @@ load_dotenv()
 # set openai model
 llm = ChatOpenAI(model="gpt-4o", temperature=0, openai_api_key=os.environ.get("BATI_OPENAI_API_KEY"))
 
-header = st.container()
-
-# with header:
-#     st.title("Simple Chatbot")
-#     st.write("This is a simple chatbot that uses the OpenAI API to generate responses to user questions.")
-
 def streamlit_ui():
     with st.sidebar:
         choice = option_menu('Navigation', ['Simple_Chat'])
